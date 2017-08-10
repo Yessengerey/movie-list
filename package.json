@@ -4,7 +4,8 @@
   "description": "Suppliment Assignment",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "react-dev": "webpack -d --watch",
+    "server-dev": "nodemon server/server.js"
   },
   "repository": {
     "type": "git",
@@ -16,9 +17,6 @@
     "url": "https://github.com/Yessengerey/movie-list/issues"
   },
   "homepage": "https://github.com/Yessengerey/movie-list#readme",
-  "scripts": {
-    "react-dev": "webpack -d --watch"
-  },
   "dependencies": {
     "express": "^4.15.4",
     "jquery": "^3.2.1",
@@ -32,6 +30,7 @@
     "babel-preset-env": "^1.6.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
+    "nodemon": "^1.11.0",
     "webpack": "^3.5.2"
   }
 }
