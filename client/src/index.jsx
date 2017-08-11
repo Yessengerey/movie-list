@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import $ from 'jquery';
 import MovieList from './components/movieList.jsx';
 
 // var movies = [
@@ -38,6 +39,18 @@ class App extends React.Component {
         },
       ]
     }
+  }
+
+  componentDidMount() {
+    $.ajax({
+      url: '/movies',
+      type: 'POST',
+      data: JSON.stringify({id: 69, title: 'HELLO WORLD'}),
+      contentType: 'application/json',
+      success: (data) => {
+         console.log(data);
+      }
+    })
   }
   render() {
     return (
